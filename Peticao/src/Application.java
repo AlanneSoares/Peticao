@@ -1,28 +1,21 @@
-/*
-
-    Petição de dados
-
- */
-
 import java.util.Scanner;
 
 public class Application {
-
     public static void main(String[] args) {
+
         String nomeProc;
-        int numGuia;
+        String numGuia;
 
         Scanner s = new Scanner(System.in);
-        System.out.print("Nome do procurador: ");
-        nomeProc = s.next();
+        do {
+            System.out.print("Nome do procurador: ");
+            nomeProc = s.next();
 
-        System.out.print("Nª da guia: ");
-        numGuia = s.nextInt();
+            if (s.next().length() < 5) {
+                System.out.println("mínimo 5 letras");
 
-        System.out.println("\n-----------------------");
-        System.out.println("       Resultado       ");
-        System.out.println("-----------------------");
-        System.out.println("Procurador: " + nomeProc + "\nNº guia: " + numGuia);
-
+                System.out.println("Procurador: " + nomeProc);
+            }
+        } while (false);
     }
 }
